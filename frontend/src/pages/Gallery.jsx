@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/kidzee.css';
 
 const Gallery = () => {
-  // Placeholder gallery images
   const galleryImages = Array.from({ length: 15 }, (_, i) => ({
     id: i + 1,
-    src: `/assets/gallery/img${i + 1}.jpg`,
-    alt: `Kidzee Bhetapara Gallery Image ${i + 1}`,
+    src: `/assets/gallery/img${i + 1}.jpg`, // served from public/assets/gallery/
+    alt: `Kidzee Bhetapara campus activity ${i + 1}`,
     caption: `Learning & Fun Moment ${i + 1}`
   }));
 
@@ -25,8 +24,15 @@ const Gallery = () => {
           <div className="gallery-grid">
             {galleryImages.map(image => (
               <div key={image.id} className="gallery-item">
-                <div className="gallery-placeholder">
-                  <span>{image.caption}</span>
+                <div className="gallery-image-wrapper">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="gallery-image"
+                    loading="lazy"
+                    width="100%"
+                    height="auto"
+                  />
                 </div>
                 <p className="gallery-caption body-small">{image.caption}</p>
               </div>
@@ -40,11 +46,11 @@ const Gallery = () => {
           <div className="content-block text-center">
             <h2 className="heading-2">Life at Kidzee Bhetapara</h2>
             <p className="body-large">
-              Our gallery showcases the vibrant life at Kidzee Bhetapara—from classroom activities and outdoor play 
+              Our gallery showcases the vibrant life at Kidzee Bhetapara—from classroom activities and outdoor play
               to special events and celebrations. Every photograph tells a story of discovery, friendship, and growth.
             </p>
             <p className="body-medium mt-md">
-              We believe in documenting and celebrating every milestone in your child's learning journey. 
+              We believe in documenting and celebrating every milestone in your child's learning journey.
               Parents receive regular photo updates through our communication app.
             </p>
           </div>
@@ -75,11 +81,6 @@ const Gallery = () => {
           text-align: center;
         }
 
-        .content-block {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
         .gallery-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -92,23 +93,27 @@ const Gallery = () => {
           gap: var(--spacing-xs);
         }
 
-        .gallery-placeholder {
+        .gallery-image-wrapper {
+          overflow: hidden;
+          border-radius: 20px;
           aspect-ratio: 4/3;
           background: var(--bg-section);
-          border-radius: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--text-secondary);
-          font-weight: 600;
-          text-align: center;
-          padding: var(--spacing-medium);
+        }
+
+        .gallery-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
           transition: transform 0.3s ease;
           cursor: pointer;
         }
 
-        .gallery-placeholder:hover {
-          transform: scale(1.03);
+        .gallery-image:hover {
+          transform: scale(1.04);
         }
 
         .gallery-caption {
