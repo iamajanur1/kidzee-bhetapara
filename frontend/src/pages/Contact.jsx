@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import '../styles/kidzee.css';
+import '../../styles/kidzee.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

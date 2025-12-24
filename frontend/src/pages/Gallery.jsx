@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/kidzee.css';
+import '../../styles/kidzee.css';
 
 const Gallery = () => {
   // Placeholder gallery images
