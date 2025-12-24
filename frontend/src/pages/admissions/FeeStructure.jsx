@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Info, CheckCircle } from 'lucide-react';
-import '../styles/kidzee.css';
+import '../../styles/kidzee.css';
 
 const FeeStructure = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Download, FileText, CheckCircle } from 'lucide-react';
-import '../styles/kidzee.css';
+import '../../styles/kidzee.css';
 
 const Prospectus = () => {
   const prospectusHighlights = [

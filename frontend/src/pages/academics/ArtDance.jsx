@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Palette, Music, Sparkles, Heart } from 'lucide-react';
-import '../styles/kidzee.css';
+import '../../styles/kidzee.css';
 
 const ArtDance = () => {
   return (
