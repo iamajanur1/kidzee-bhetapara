@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Heart, Users, Target, BookOpen, Shield, Star } from 'lucide-react';
-import '../../styles/kidzee.css';
+import '../styles/kidzee.css';
 
 const About = () => {
   return (

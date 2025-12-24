@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, TrendingUp, Users, Award } from 'lucide-react';
-import '../../styles/kidzee.css';
+import '../styles/kidzee.css';
 
 const PrimaryLearning = () => {
   return (

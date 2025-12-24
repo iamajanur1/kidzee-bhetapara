@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Trophy, Star, Users } from 'lucide-react';
-import '../../styles/kidzee.css';
+import '../styles/kidzee.css';
 
 const Achievements = () => {
   return (
