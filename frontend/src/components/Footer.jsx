@@ -75,7 +75,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Kidzee Bhetapara (Primary K5). All rights reserved.
           </p>
           <div className="footer-bottom-links">
-            <span>Designed by BrightForge Labs</span>
+            <span><a href="https://brightforgelabs-main.vercel.app">Designed by BrightForge Labs</a></span>
           </div>
         </div>
       </div>
